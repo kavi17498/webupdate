@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title></title>
+</head>
+<body>
+	<button type="button" class="hidebtn" id="basic-button">Hide</button>
+	<button type="button" class="showbtn"id="basic-button">Show</button>
+	<button type="button" class="togglebtn"id="basic-button">Toggle</button>
+
+	<hr>
+
+	<p class="pfast" id="para">This paragraph Will show/ hide with speed</p>
+	<p class="pslow" id="para">This paragraph Will show /hide with slow</p>
+	<p class="pclass"id="para">This paragraph Will show/ hide with 2000ms</p>
+
+	<hr>
+	<br>
+
+	<button type="button" class="fadeout" id="basic-button">Fadeout</button>
+	<button type="button" class="fadein"id="basic-button">Fadein</button>
+	<button type="button" class="togglebtn2"id="basic-button">Toggle</button>
+	<button type="button" class="fadeto"id="basic-button">Fade to 50%</button>
+	<button type="button" class="fadeto100"id="basic-button">Fade to 100%</button>
+
+	<hr>
+
+	<p class="p2fast" id="para">This paragraph Will fade with speed</p>
+	<p class="p2slow" id="para">This paragraph Will fade with slow</p>
+	<p class="p2class"id="para">This paragraph Will fade with 2000ms</p>
+
+	<hr>
+	<br>
+
+	<button type="button" class="startbtn" id="basic-button">Start</button>
+	<button type="button" class="resetbtn"id="basic-button">Reset And Fade Out</button>
+
+	<hr>
+
+	<div class="box"></div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			//hide
+			$(".hidebtn").click(function(){
+				$("p.pfast").hide("fast");
+				$("p.pslow").hide("slow");
+				$("p.pclass").hide(2000);
+
+
+			});
+
+			//show
+			$(".showbtn").click(function(){
+				$("p.pfast").show("fast");
+				$("p.pslow").show("slow");
+				$("p.pclass").show(2000);
+
+
+			});
+
+			//toggle
+			$(".togglebtn").click(function(){
+				$("p.pfast").toggle("fast");
+				$("p.pslow").toggle("slow");
+				$("p.pclass").toggle(2000);
+
+
+			});
+
+			//fadeout
+			$(".fadeout").click(function(){
+				$("p.p2fast").fadeOut("fast");
+				$("p.p2slow").fadeOut("slow");
+				$("p.p2class").fadeOut(2000);
+			});
+
+			//fadein
+			$(".fadein").click(function(){
+				$("p.p2fast").fadeIn("fast");
+				$("p.p2slow").fadeIn("slow");
+				$("p.p2class").fadeIn(2000);
+			});
+
+			//toggle
+			$(".togglebtn2").click(function(){
+				$("p.p2fast").fadeToggle("fast");
+				$("p.p2slow").fadeToggle("slow");
+				$("p.p2class").fadeToggle(2000);
+			});
+
+			//Fadeto
+			$(".fadeto").click(function(){
+				$("p.p2fast").fadeTo("fast",0.5);
+				$("p.p2slow").fadeTo("slow",0.5);
+				$("p.p2class").fadeTo(2000,0.5);
+			});
+
+			//Fadeto100%
+			$(".fadeto100").click(function(){
+				$("p.p2fast").fadeTo("fast",1.0);
+				$("p.p2slow").fadeTo("slow",1.0);
+				$("p.p2class").fadeTo(2000,1.0);
+			});
+
+
+			//Animate the Box
+			$(".startbtn").click(function(){
+				$("div.box").animate({
+					width:"300px",
+					height:"300px",
+					marginLeft:"150px",
+					position:"absolute",
+					borderWidth:"10px",
+					opacity :1
+				});
+				
+			});
+
+			//reset and fade out
+			$(".resetbtn").click(function(){
+				$("div.box").animate({
+					width:"100px",
+					height:"100px",
+					marginLeft:"30px",
+					position:"absolute",
+					borderWidth:"2px",
+					opacity :0.5
+				}).fadeOut();
+			});
+
+
+			
+
+
+
+
+
+
+
+
+		});
+	</script>
+
+</body>
+</html>

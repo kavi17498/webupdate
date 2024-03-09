@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Validate Plugin -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ajax With Jquery</h1>
+    <button id="button1">Click Here</button>
+    <button id="button2">Hide</button>
+    <div id="div1"> <p></p> </div>
+    <br>
+    <div id="div2"></div>
+
+
+    <!-- Get Details From Another Webpage .ajax method -->
+
+    <script type="text/javascript">
+
+        //Get Details From Another Webpage .ajax method
+
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $.ajax('detail.htm',{
+                    success:function(result){
+                        $("#div1").html(result);
+                    }
+                });
+            });
+        });
+
+
+        //Get Details From Another Webpage Load method
+        $(document).ready(function(){
+            $('#div2').load('detail.txt');
+            $("#button2").hide("fast");
+
+        });
+
+
+        //Callback funtion to show a alert about load status
+        $(document).ready(function(){
+            $("#div2").load('detail.txt', function(responseTxt, statusTxt, xhr){
+                if (statusTxt ==  "success") {
+                    alert("Content Loaded sucessfully");
+                }
+                if (statusTxt == "error") {
+                    alert("Error");
+                }
+                    
+                
+            });    
+        });
+
+
+
+        //button show hide
+
+        $("#button1").click(function(){
+                $("#button2").show("fast");
+                
+                
+
+
+
+
+    </script>
+
+    
+
+
+
+
+
+
+	
+
+</body>
+</html>

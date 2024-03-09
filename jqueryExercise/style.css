@@ -1,0 +1,92 @@
+body{
+  font-family: Verdana;
+}
+
+/* Button Styles with IDs */
+
+#basic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#basic-button:hover {
+  background-color: #0056b3;
+}
+
+#primary-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#primary-button:hover {
+  background-color: #0056b3;
+}
+
+#secondary-button {
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+#secondary-button:hover {
+  background-color: #f0f0f0;
+}
+
+#danger-button {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#danger-button:hover {
+  background-color: #c82333;
+}
+
+#success-button {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#success-button:hover {
+  background-color: #218838;
+}
+
+#disabled-button {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+#icon-button {
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+#custom-button {
+  /* Add your custom styles here */
+}
+
+
+#para{
+  background-color: darkgreen;
+  padding: 10px;
+  color: white;
+}
+
+.box{
+  color: red;
+  border: 1px solid black;
+}
